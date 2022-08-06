@@ -24,9 +24,9 @@
 >`手动配置过程见附录-2`
 ## 演示
 * 三分钟演示！一个神奇的留言板！
-[![三分钟演示！一个神奇的留言板！](./cover/build.png)](https://www.bilibili.com/video/BV16a411f7rV?spm_id_from=444.41.list.card_archive.click&vd_source=d1bc747d3eaeadbb69adb8024235358d)
+[![三分钟演示！一个神奇的留言板！](./cover/build.png)](https://www.bilibili.com/video/BV16a411f7rV)
 * 三分钟破解！一个神奇的留言板！
-[![三分钟破解！一个神奇的留言板！](./cover/break.png)](https://www.bilibili.com/video/BV16a411f7rV?spm_id_from=444.41.list.card_archive.click&vd_source=d1bc747d3eaeadbb69adb8024235358d)
+[![三分钟破解！一个神奇的留言板！](./cover/break.png)](https://www.bilibili.com/video/BV1ze4y1D7iV)
 ## 附录-1 项目测试验证环境信息
 ```
 Client:
