@@ -1,5 +1,5 @@
 # 一个神奇的留言板
-一句话简介
+本项目是 [2022夏信息安全综合实践](https://c4pr1c3.github.io/cuc-wiki/cp/2022/index.html) 的团队成果，包含代码、说明文档、个人报告。
 ## 功能清单
 * 基于网页的用户注册登录与管理个人信息系统
   * 允许用户注册的系统
@@ -24,9 +24,9 @@
 >`手动配置过程见附录-2`
 ## 演示
 * 三分钟演示！一个神奇的留言板！
-[![三分钟演示！一个神奇的留言板！](./img/build.png)](https://www.bilibili.com/video/BV16a411f7rV?spm_id_from=444.41.list.card_archive.click&vd_source=d1bc747d3eaeadbb69adb8024235358d)
+[![三分钟演示！一个神奇的留言板！](./cover/build.png)](https://www.bilibili.com/video/BV16a411f7rV?spm_id_from=444.41.list.card_archive.click&vd_source=d1bc747d3eaeadbb69adb8024235358d)
 * 三分钟破解！一个神奇的留言板！
-[![三分钟破解！一个神奇的留言板！](./img/break.png)](https://www.bilibili.com/video/BV16a411f7rV?spm_id_from=444.41.list.card_archive.click&vd_source=d1bc747d3eaeadbb69adb8024235358d)
+[![三分钟破解！一个神奇的留言板！](./cover/break.png)](https://www.bilibili.com/video/BV16a411f7rV?spm_id_from=444.41.list.card_archive.click&vd_source=d1bc747d3eaeadbb69adb8024235358d)
 ## 附录-1 项目测试验证环境信息
 ```
 Client:

@@ -1,6 +1,6 @@
 import requests
 import re
-url = "http://127.0.0.1:9000/project/search.php"
+url = "http://127.0.0.1:9000/demo/search.php"
 admintable = ""  # admin表名
 pwdcolumn = ""   # admin密码列
 password = ""    # admin密码
