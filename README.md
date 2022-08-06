@@ -23,6 +23,7 @@
 通过 `sudo bash build.sh` 方式部署后，打开浏览器访问: `http://localhost:9000/demo` 即可快速体验系统所有功能。
 >`手动配置过程见附录-2`
 ## 演示
+![三分钟演示！一个神奇的留言板！](https://www.bilibili.com/video/BV16a411f7rV?spm_id_from=444.41.list.card_archive.click&vd_source=d1bc747d3eaeadbb69adb8024235358d)
 视频
 ## 附录-1 项目测试验证环境信息
 ```
