@@ -95,6 +95,7 @@
 ### 脚本编写
 > [exp.py](https://github.com/Taaami/2022-summer-project/blob/main/exp.py) 思路与手动破解相同，但可适应不同字段数、回显点等情况下的注入。
 
+![result](./img/exp.png)
 **脚本有详细注释，此处不再赘述。**
 ### 镜像搭建
 - 原有网站环境为 `BuildIt` 组搭建，在此基础上我和罗舒文同学完成了 `docker` 部署。
