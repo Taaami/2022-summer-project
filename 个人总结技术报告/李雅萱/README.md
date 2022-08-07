@@ -1,8 +1,22 @@
+- [李雅萱 —— 个人总结技术报告](#李雅萱--个人总结技术报告)
+  - [对团队的贡献](#对团队的贡献)
+  - [个人工作介绍](#个人工作介绍)
+    - [漏洞探索](#漏洞探索)
+      - [权限跨越漏洞](#权限跨越漏洞)
+      - [文件上传漏洞](#文件上传漏洞)
+      - [XSS漏洞](#xss漏洞)
+      - [sql漏洞](#sql漏洞)
+    - [漏洞破解](#漏洞破解)
+    - [脚本编写](#脚本编写)
+    - [镜像搭建](#镜像搭建)
+  - [问题及解决](#问题及解决)
+  - [总结与思考](#总结与思考)
+  - [参考资料](#参考资料)
 # 李雅萱 —— 个人总结技术报告
 ## 对团队的贡献
 - 在靶场环境对各类漏洞进行探索。
 - 成功发现、破解 `sql` 漏洞。
-- 对 `sql` 漏洞编写自动化破解脚本，见 [exp.py](https://github.com/Taaami/2022-summer-project/blob/main/exp.py) 。
+- 对 `sql` 漏洞编写自动化破解脚本，见 [exp.py](https://github.com/Taaami/2022-summer-project/blob/main/exp.py) [requirements.txt](https://github.com/Taaami/2022-summer-project/blob/main/requirements.txt) 。
 - 搭建 `docker` 镜像环境，见 [docker](https://github.com/Taaami/2022-summer-project/tree/main/docker) 。
 - 编写自动化脚本，快速搭建环境，见 [build.sh](https://github.com/Taaami/2022-summer-project/blob/main/build.sh) 。
 - 编写 `README`，创建、整理小组 [项目仓库](https://github.com/Taaami/2022-summer-project) 。
@@ -94,8 +108,19 @@
 - 与原有登录页面相同，尝试 `admin/adminpwd` 登录管理员用户。
 ### 脚本编写
 > [exp.py](https://github.com/Taaami/2022-summer-project/blob/main/exp.py) 思路与手动破解相同，但可适应不同字段数、回显点等情况下的注入。
-
-![result](./img/exp.png)
+- 根据单引号判断出存在 `sql注入` 漏洞后，脚本思路如下：
+    ```mermaid
+    graph TD
+    A[开始注入]-->B(判断字段数)
+    B-->C(查看回显点)
+    C-->D(在回显处爆表名)
+    D-->E(在回显处爆列名)
+    E-->F(输出admin_id:admin_name:admin_pass)
+    F-->G(判断加密算法,解密得到密码)
+    ```
+- 脚本输出结果
+  
+  ![result](./img/exp.png)
 **脚本有详细注释，此处不再赘述。**
 ### 镜像搭建
 - 原有网站环境为 `BuildIt` 组搭建，在此基础上我和罗舒文同学完成了 `docker` 部署。

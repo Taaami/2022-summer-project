@@ -5,6 +5,7 @@ admintable = ""  # admin表名
 pwdcolumn = ""   # admin密码列
 password = ""    # admin密码
 
+# 注意：前提是登录用户后发表过留言
 # 判断字段数
 dbLen = 1
 while True:
