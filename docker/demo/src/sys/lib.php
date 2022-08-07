@@ -1,23 +1,13 @@
 <?php
 
-//自写函数存放处
 
-/*function clean_input($dirty){
-    if (get_magic_quotes_gpc()) {
-        $clean = mysql_real_escape_string(stripslashes($dirty));     
-    }else{
-        $clean = mysql_real_escape_string($dirty);  
-    } 
-    return $clean;
-}*/
 
 function isNotXss($str){
-	$restr = htmlspecialchars($str);
 	//把预定义的字符 "<" （小于）和 ">" （大于）转换为 HTML 实体
+    $restr = preg_replace( '/<(.*)s(.*)c(.*)r(.*)i(.*)p(.*)t/i', '', $str);
+    $restr = htmlspecialchars($restr);
 	return $restr;
 }
-
-
 
 function is_pic($file_name) 
 { 

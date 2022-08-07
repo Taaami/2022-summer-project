@@ -6,25 +6,20 @@ $query = "SELECT * FROM comment ORDER BY comment_id";
 $data = mysqli_query($dbc,$query) or die('Error!!');
 mysqli_close($dbc);
 ?>
-<div class="bs-example table-responsive">
-	<table class="table table-striped table-hover ">
-	<tr>
-		<th>用户名</th>
-		<th>留言</th>
-	</tr>
+<div class="row">
+<div class="message-title-big">留言板</div>
 <?php
 while($com = mysqli_fetch_array($data)) {
 	//净化输出变量
 	$html['username'] = htmlspecialchars($com['user_name']);
 	$html['comment_text'] = htmlspecialchars($com['comment_text']);
-	
-	echo '<tr>';
-	echo '<td>'.$html['username'].'</td>';
-	echo '<td>'.$html['comment_text'].'</td>';
-	echo '</tr>';
+
+	echo '<div class="message-content-body">';
+	echo '<div class="message-user">'.$html['username'].'</div>';
+	echo '<div class="message-content">'.$html['comment_text'].'</div>';
+	echo '</div>';
 }
 ?>
-</table>
 </div>
 <?php 
 if (isset($_SESSION['username']))

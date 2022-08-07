@@ -1,40 +1,28 @@
 <?php
 //调入头文件
-include_once('sys/config.php');//config嵌套了lib
+include_once('sys/config.php');
 include_once('header.php');
 
 if (!empty($_GET['search'])) {
-	//$the_search = isNotXss($_GET['search']);
 	$the_search = $_GET['search'];
 	//防止sql注入...
-	//$data = $dbc->prepare('SELECT * FROM comment WHERE comment_text LIKE ? LIMIT 1;');
 	$query = "SELECT * FROM comment WHERE comment_text like '%{$the_search}%' LIMIT 1;";
-	
-	//$data->execute();
 	$data = mysqli_query($dbc,$query);	
 ?>
 
-<div class="bs-example table-responsive">
-	<?php echo 'The result for'.$the_search.'is:'?>
-	<table class="table table-striped table-hover ">
-	<tr>
-		<th>用户名</th>
-		<th>留言</th>
-	</tr>
+<div class="row">
+<div class="message-title-big">留言板</div>
 <?php
 while($com = mysqli_fetch_array($data)) {
 	$html['username'] = htmlspecialchars($com['user_name']);
-	$html['comment_text'] = htmlspecialchars($com['comment_text']);
-	
-	echo '<tr>';
-	echo '<td>'.$html['username'].'</td>';
-	echo '<td>'.$html['comment_text'].'</td>';
-	echo '</tr>';
+	$html['comment_text'] = htmlspecialchars($com['comment_text']);	
+	echo '<div class="message-content-body">';
+	echo '<div class="message-user">'.$html['username'].'</div>';
+	echo '<div class="message-content">'.$html['comment_text'].'</div>';
+	echo '</div>';
 }
 if (isset($_SESSION['username']))
 {?>
-	
-	</table>
 </div>
 <div class="row">
 	<div class="message-title">留言区</div>
