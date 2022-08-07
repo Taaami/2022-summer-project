@@ -27,7 +27,7 @@
 [![三分钟演示！一个神奇的留言板！](./cover/build.png)](https://www.bilibili.com/video/BV16a411f7rV)
 * 三分钟破解！一个神奇的留言板！
 [![三分钟破解！一个神奇的留言板！](./cover/break.png)](https://www.bilibili.com/video/BV1ze4y1D7iV)
-## 附录-1 项目测试验证环境信息
+## 附录-1：项目测试验证环境信息
 ```
 Client:
  Version:           20.10.14+dfsg1
@@ -64,7 +64,7 @@ PHP : PHP 8.1.2 (cli) (built: Jan 27 2022 01:00:14) (NTS)
 Python : Python 3.9.10
 Apache2 : Server version Apache/2.4.54 (Debian)
 ```
-## 附录-2 配置本项目
+## 附录-2：配置本项目
 ```shell
 #!/bin/bash
 # build.sh
@@ -80,4 +80,11 @@ sudo docker run -d --name test -p 9000:80 demo:v3
 sudo docker ps
 # 浏览器访问localhost:9000/demo
 ```
-## 附录-3
+## 附录-3：配置运行自动化脚本
+```shell
+# 请先上传留言，内容不限
+# 安装该项目所依赖的所有包
+pip install -r requirements.txt
+# 运行exp脚本
+sudo python3 exp.py
+```
